@@ -99,11 +99,34 @@ body{
 .burger__btn{
     width: 40px;
     height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    opacity: 0.3;
-    transition: all .4s;
+    z-index: 15;
+    position: relative;
+}
+.burger__btn--active div:nth-child(1){
+    transform: rotate(45deg);
+    width: 30px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+}
+.burger__btn--active div:nth-child(2){
+    display: none;
+}
+.burger__btn--active div:nth-child(3){
+    transform: rotate(-45deg);
+    width: 30px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
 }
 .burger__btn:hover{
     opacity: 1;
@@ -112,7 +135,6 @@ body{
     width: 100%;
     height: 1px;
     background-color: #000000;
-    margin-bottom: 10px;
 }
 .burger__btn div:last-child{
     margin-bottom: 0px;
@@ -121,11 +143,12 @@ body{
     display: none;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255);
+    background-color: #fff;
     z-index: 10;
     position: fixed;
     top: 0;
     left: 0;
+    transition: all .3s ease;
 }
 .burger__nav{
     display: flex;
