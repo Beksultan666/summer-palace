@@ -1,0 +1,246 @@
+/* ==== Fonts ==== */
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Light.eot');
+	src: local('☺'), 
+         url('../fonts/Montserrat-Light.woff') format('woff'), 
+         url('../fonts/Montserrat-Light.ttf') format('truetype'), 
+         url('../fonts/Montserrat-Light.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Regular.eot');
+	src: local('☺'), 
+         url('../fonts/Montserrat-Regular.woff') format('woff'), 
+         url('../fonts/Montserrat-Regular.ttf') format('truetype'), 
+         url('../fonts/Montserrat-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Medium.eot');
+	src: local('☺'), 
+		 url('../fonts/Montserrat-Medium.woff') format('woff'), 
+		 url('../fonts/Montserrat-Medium.ttf') format('truetype'), 
+		 url('../fonts/Montserrat-Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Bold.eot');
+	src: local('☺'), 
+         url('../fonts/Montserrat-Bold.woff') format('woff'), 
+         url('../fonts/Montserrat-Bold.ttf') format('truetype'), 
+         url('../fonts/Montserrat-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* ==== Zeroing ==== */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+	font-family: 'Montserrat';
+    color: inherit;
+    outline: none;
+}
+/* ==== Containers ==== */
+.header__container{
+    max-width: 1830px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* ==== Header ==== */
+.header__top{
+    max-width: 1395px;
+    margin: 60px auto 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-btn{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-style: normal;
+    color: #D1A954;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 7px 9px 6px;
+    border: 1px solid rgba(209, 169, 84, 0.9);
+    margin-right: 21px;
+}
+.nav__link{
+    font-family: 'Montserrat';
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    color: #000;
+    transition: all .2s;
+    margin-right: 30px;
+}
+.nav__link:hover{
+    color: #D1A954;
+}
+.nav__link:last-child{
+    margin-right: 0px;
+}
+.burger__btn{
+    width: 40px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: all .4s;
+}
+.burger__btn:hover{
+    opacity: 1;
+}
+.burger__btn div{
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    margin-bottom: 10px;
+}
+.burger__btn div:last-child{
+    margin-bottom: 0px;
+}
+.burger__menu{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.burger__nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.burger__nav-link{
+    color: #000;
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: all .2s;
+    text-transform: uppercase;
+}
+.burger__nav-link:first-child{
+    cursor: pointer;
+}
+.burger__nav-link:hover{
+    color: #D1A954;
+}
+.slick-slide{
+    margin: 0 15px;
+}
+.card{
+    max-width: 570px !important;
+    height: 650px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+}
+.card__inner-block{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 15px;
+    background-color: rgba(209, 170, 84, 0.9);
+}
+.card__inner-block-content{
+    border: 1px solid rgb(255, 255, 255, 0.5);
+}
+.card-title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 21px;
+    margin-bottom: 20px;
+}
+.card-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 135%;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 22px;
+}
+.slick-arrow{
+    text-align: center;
+    z-index: 2;
+}
+.slick-prev{
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-85px);
+    bottom: -60px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 5px;
+    height: 8.5px;
+}
+.slick-next{
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    transform: translateX(80px);
+    bottom: -60px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 5px;
+    height: 8.5px;
+}
+.slick-dots {
+    z-index: 2;
+    display: flex;
+    position: absolute;
+    width: 144px;
+    bottom: -60px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+.slick-dots li button{
+    display: block;
+    width: 24px;
+    height: 1px;
+    font-size: 0px;
+    cursor: pointer;
+    border: none;
+}
+.slick-active button{
+    background-color: #000;
+}
