@@ -17,12 +17,14 @@ let burgerIsActive = false;
 document.querySelector('.burger__btn').addEventListener("click", () => {
     document.querySelector('.burger__btn').classList.toggle('burger__btn--active');
     if (burgerIsActive === false) {
-        document.querySelector('.burger__menu').style.display = 'block';
+        document.querySelector('.burger__menu').style.opacity = 1;
+        document.querySelector('.burger__menu').style.visibility = 'visible';
         document.body.style.overflow = 'hidden';
-        burgerIsActive = !burgerIsActive;
+        burgerIsActive = true;
     } else {
-        document.querySelector('.burger__menu').style.display = 'none'
-        document.body.style.overflow = ''
-        burgerIsActive = !burgerIsActive;
+        document.querySelector('.burger__menu').style.opacity = 0;
+        document.querySelector('.burger__menu').style.visibility = 'hidden';
+        document.body.style.overflow = '';
+        burgerIsActive = false;
     }
 })
