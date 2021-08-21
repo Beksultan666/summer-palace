@@ -20,11 +20,11 @@ document.querySelector('.burger__btn').addEventListener("click", () => {
         document.querySelector('.burger__menu').style.opacity = 1;
         document.querySelector('.burger__menu').style.visibility = 'visible';
         document.body.style.overflow = 'hidden';
-        burgerIsActive = true;
+        burgerIsActive = !burgerIsActive;
     } else {
         document.querySelector('.burger__menu').style.opacity = 0;
         document.querySelector('.burger__menu').style.visibility = 'hidden';
         document.body.style.overflow = '';
-        burgerIsActive = false;
+        burgerIsActive = !burgerIsActive;
     }
 })
